@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Page</title>
+</head>
+<body>
+    <!-- Interpolation Syntax : Interpolation refers to embedding expressions into marked up text.
+        Tags :
+        1)<%= %> Outputs the value into the template (HTML escaped).
+        2)<% %> Scriptlet tag for control-flow,no output.
+    -->
+
+    <!-- Loops -->
+    <h2>This page belongs to @<%= username %></h2>
+    <button>Follow</button>
+    <button>Message</button>
+    <h3>Accounts that follow you:</h3>
+    <ul>
+        <% for(let name of followers) { %>
+            <li> <%= name %> </li>
+        <% } %>
+    </ul>
+</body>
+</html>
