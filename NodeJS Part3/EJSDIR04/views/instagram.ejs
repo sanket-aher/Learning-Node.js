@@ -1,0 +1,31 @@
+ <!-- Interpolation Syntax : Interpolation refers to embedding expressions into marked up text.
+        Tags :(ejs.co/)
+        1)<%= %> Outputs the value into the template (HTML escaped i.e string value).
+        2)<% %> Scriptlet tag for control-flow,no output.
+        3)<%- %> Outputs the unescaped value(use HTML Tags) into the template.
+-->
+
+<!--
+    Including Templates in EJS:
+            EJS provides an include function to include other EJS templates within a main template.
+-->
+<%- include("includes/head.ejs") %>
+<body>
+    <h1>This page belongs to @<%= data.name %>  </h1>
+    <button>Follow</button>
+    <button>Message</button>
+
+    <p>Followers : <%= data.followers %> &nbsp;&nbsp;&nbsp;&nbsp; Following : <%= data.following %> </p>
+    <hr>
+
+
+    <% for(let post of data.posts) { %>
+        <img src="<%= post.image %>" alt="some img">
+    <p>Likes : <%= post.likes %> &nbsp;&nbsp;&nbsp;&nbsp; Comments : <%= post.comments %> </p>
+    <% } %>
+
+    <%- include("includes/footer.ejs") %>
+
+    <script src="/app.js"></script> <!--It By default search in public folder href="/js/public/app.js" as mentioned in index.js file  -->
+</body>
+</html>
