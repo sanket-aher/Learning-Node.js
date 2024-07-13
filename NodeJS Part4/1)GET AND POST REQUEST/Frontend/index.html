@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GET & POST Requests</title>
+</head>
+<body>
+    <!-- Q.Difference between GET & POST Request?
+        Ans:  GET - 1)Used to GET some response.
+                    2)Data sent in query strings(limited,string data & visible in URL).
+              POST- 1)Used to POST something(for Create/Write/Update)
+                    2)Data sent via request body(any type of data)  -->
+
+    <!--Ex1-->
+    <h3>GET Request Form</h3>
+    <form action="http://localhost:8080/register" method="get">
+        <input type="text" name="user" placeholder="Enter Username">
+        <input type="password" name="password" placeholder="Enter Password">
+        <button>Submit</button>
+    </form>
+    <hr>
+    <h3>POST Request Form</h3>
+    <form action="http://localhost:8080/register" method="post">
+        <input type="text" name="user" placeholder="Enter Username">
+        <input type="password" name="password" placeholder="Enter Password">
+        <button>Submit</button>
+    </form>
+
+<!--
+    Output : Now hit on browser with GET/POST Request/hoppscotch.io with GET/POST Request , run index.html file of Frontend folder 
+            Ex1) Enter Username => john
+                 Enter Password => 123
+                 Standard GET Response. Welcome john
+            Ex2) Enter Username => smith
+                 Enter Password => 123
+                 Standard POST Response. Welcome smith 
+-->
+
+</body>
+</html>
